@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <h1>Closure</h1>
+    <button id="red">red</button>
+    <button id="green">green</button>
+    <!-- <script>
+        function outer()
+        {
+            let name="js";
+            function inner()
+            {
+                console.log("inner",name);
+            }
+            function inner1()
+            {
+                console.log("inner1",name);
+            }
+            inner();
+            inner1();
+        }
+        outer();
+
+
+    </script> -->
+    
+    <!-- another example of closure -->
+     
+     <script>
+        function clickHandler(color)
+     {
+        return function()
+         {
+             document.body.style.backgroundColor=`${color}`;
+         }
+     }
+     document.getElementById("red").onclick=clickHandler("red");
+         document.getElementById("green").onclick=clickHandler("green");
+     </script>
+</body>
+</html>

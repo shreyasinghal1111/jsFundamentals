@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>async js</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // use of settimeout and clear timeout
+    const changeText=document.querySelector("h1").innerHTML="Sarvdhan";
+    const stop=setTimeout(changeText,2000);
+    setTimeout(()=>{
+        console.log(changeText);
+    },3000);
+    document.querySelector("#stop").addEventListener("click",()=>{
+        clearTimeout(stop);
+        console.log("stopped");
+    })
+
+</script>
+</html>
